@@ -96,6 +96,7 @@ The request DTO separates incoming API data from the database entity and prevent
 ## Implementation Questions
 
 1.How do a request DTO and an entity differ, and why is EquipmentItemId absent from the DTO?
+
 -The DTO represents the information a client sends to the API, but the entity represents the equipment record stored in the database. For EquipmentItemID, it is left out of the DTO because the database generates the ID when a new record is created.
 
 2.How do DI, DbContext, and SaveChangesAsync work together for a PUT?
