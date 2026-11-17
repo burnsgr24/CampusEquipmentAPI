@@ -1,4 +1,3 @@
-
 # Campus Equipment API
 
 ## Overview
@@ -118,3 +117,58 @@ The request DTO separates incoming API data from the database entity and prevent
 6.Why must this API validate string lengths even though the EF model declares maximum lengths?
 
 -The API needs to check string lengths before saving data so it can reject invalid requests with a clear HTTP 400 response. The EF model defines database limits, but it does not replace the API's own input validation.
+
+## Evidence Index
+
+### E1 - Environment and Build
+- [Successful Build](evidence/E1build.png)
+- [SDK Version](evidence/E1dotnetVersion.png)
+- [EF Core Packages](evidence/E1listPackage.png)
+
+### E2 - Migrations
+- [Applied Migrations](evidence/E2appliedMigrations.png)
+- [Database Update](evidence/E2databaseUpdate.png)
+- [Migration Files](evidence/E2migrationFiles.png)
+
+### E3 - Database Seeding
+- [Seed Rows After Update](evidence/E3seedRowsAfterUpdate.png)
+- [Seed Rows Before Update](evidence/E3seedRowsBeforeUpdate.png)
+
+### E4 - API Operations
+- [DELETE Request](evidence/E4delete.png)
+- [GET Collection](evidence/E4getCollection.png)
+- [GET Single Item](evidence/E4getSingle.png)
+- [GET Updated Item](evidence/E4getUpdated.png)
+- [POST Created Item](evidence/E4postCreated.png)
+- [PUT Updated Item](evidence/E4putUpdated.png)
+
+### E5 - Persistence and Deletion
+- [After Delete](evidence/E5afterDelete.png)
+- [After Restart](evidence/E5afterRestart.png)
+- [Final Collection](evidence/E5finalCollection.png)
+
+### E6 - Validation and Error Handling
+- [Invalid Request 07](evidence/E6invalid07.png)
+- [Invalid Request 08](evidence/E6invalid08.png)
+- [Invalid Request 09](evidence/E6invalid09.png)
+- [Invalid Request 10](evidence/E6invalid10.png)
+- [Invalid Request 11](evidence/E6invalid11.png)
+- [Invalid Request 12](evidence/E6invalid12.png)
+- [Unchanged Data After Invalid Writes](evidence/E6invalidWritesUnchanged.png)
+- [Missing DELETE](evidence/E6missingDelete.png)
+- [Missing PUT](evidence/E6missingPut.png)
+
+### E7 - SQLite Database Evidence
+- [Database Before Restart](evidence/E7databaseBeforeRestart.png)
+- [Equipment Schema](evidence/E7equipmentSchema.png)
+- [Final Database Rows](evidence/E7finalDatabaseRows.png)
+- [Final Row Count](evidence/E7finalRowCount.png)
+- [Migration History](evidence/E7migrationHistory.png)
+
+### E8 - Repository and Documentation
+- [GitHub Repository](evidence/E8githubRepo.png)
+- [README Screenshot 1](evidence/E8readme1.png)
+- [README Screenshot 2](evidence/E8readme2.png)
+- [README Screenshot 3](evidence/E8readme3.png)
+- [Tracked Files](evidence/E8trackedFiles.png)
+- [Evidence Index](evidence/E8evidenceIndex.png)
